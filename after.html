@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <a href="" style="text-decoration: none">
+                <h1 class="acps3">Results</h1>
+            </a>
+            <div class="video-element">
+                <video src="{{ url_for('static', filename='videos/vd1.mp4') }}" muted loop autoplay></video>
+            </div>
+        </div>
+    </header>
+    <section>
+        <table class="table">
+            <thead class="bg-theme">
+                <tr>
+                    <th class="parameters1">Ingredient</th>
+                    <th class ="parameters2">Input Value</th>
+                    <th class ="parameters3">Reference Range</th>
+                    
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Total Fat</td>
+                    <td>{{f}}</td>
+                    <td>0.5 g - 1.5 g</td>
+                  
+                </tr>
+                <tr>
+                    <td>Colestrol</td>
+                    <td>{{c}}</td>
+                    <td>20 mg-70 mg</td>
+                   
+                </tr>
+                <tr>
+                    <td>Sodium</td>
+                    <td>{{s}}</td>
+                    <td>50 mg - 100 mg</td>
+                    
+                </tr>
+                <tr>
+                    <td>Total Carbohydrates</td>
+                    <td>{{carbs}}</td>
+                    <td>200 mg - 340 mg</td>
+                    
+                </tr>
+                <tr>
+                    <td>Protein</td>
+                    <td>{{pro}}</td>
+                    <td>20 g - 30g</td>
+                    
+                </tr>
+                <tr>
+                    <td>Calcium</td>
+                    <td>{{cal}}</td>
+                    <td>180 mg - 250 mg</td>
+                   
+                </tr>
+                <tr>
+                    <td>Potassium</td>
+                    <td>{{p}}</td>
+                    <td>140 mg -300 mg</td>
+                    
+                </tr>
+                <tr>
+                    <td>Iron</td>
+                    <td>{{i}}</td>
+                    <td>0.5 mg - 2 mg</td>
+                   
+                </tr>
+
+            </tbody>
+        </table>
+    </section>
+    <section style="display: flex; flex-direction: row;">
+        <a href="{{url_for('main')}}">
+            <button name="login" value="predict" type="submit" class="predict">
+                Back
+              </button></a>
+        <div class="result-container">
+            <p>Quality Of Gym Supplement is :- </p>
+            <p class="result">{{data}}</p>
+        </div>
+    </section>
+    <marquee direction="left" loop=infinite scrollamount ="10" ><p>* This value varies from individual to individual depending on body type *</p></marquee>
+</body>
+
+
+</html>
+<td></td>

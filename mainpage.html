@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <a href="" style="text-decoration: none">
+                <h1 class="acps3">Gym Supplement Quality Prediction Model</h1>
+            </a>
+            <div class="video-element">
+                <video src="{{ url_for('static', filename='videos/vd1.mp4') }}" muted loop autoplay></video>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="showcase">
+            <div class="container">
+                <form action="{{url_for('predict')}}" method="POST">
+                    <div class="unit" style="display: flex;">
+                        <div class="input-groups form-item message-error" data-tooltip="Fats are extremely important for a bulk, as they are a great source of energy as well as essential for proper hormone function (and hormones play a huge role in building muscle).Fats are energy-dense nutrients: they contain 9 kcal per gram. This value is over two times more than proteins and carbohydrates, which have 4 kcal per gram. Fat should be consumed in moderate amounts (0.5–1.5 g/day).">
+                            <p>Enter Total Fat</p>
+                            <input type="float" autocomplete="off" name="totalfat" required />
+
+                        </div>
+                        <h3>in g</h3>
+                    </div>
+                    <div class="unit" style="display: flex;">
+                        <div class="input-groups form-item message-error" data-tooltip=" Cholesterol is a natural substance that’s produced in your body and is found in animal-based foods. It’s a waxy, fatty substance that travels through your bloodstream.
+
+                    Your body needs cholesterol to help build cells and produce certain hormones. Your body produces all the cholesterol it needs in the liver and intestines from fats, sugars, and proteins.Most whey protein brands do have some cholestrol ranging from 20 to 70 mg. Typically a 50 mg cholesterol would serve about 18% of your daily allowance. So it is within allowable limits. Eat as little dietary cholesterol as possible, but there are no specific limits">
+                            <p>Enter Cholesterol</p>
+                            <input type="float" autocomplete="off" name="colestrol" required />
+
+                        </div>
+                        <h3>in mg</h3>
+                    </div>
+                    <div class="unit" style="display: flex;">
+                        <div class="input-groups form-item message-error" data-tooltip="Sodium plays a vital role in our body. It can help regulate muscle contraction, nerve function and blood volume. It’s estimated that your body only needs 186 mg of sodium per day to function properly. Therefore everyone should consume 50-100mg of sodium through supplements if required.">
+                            <p>Enter Sodium</p>
+                            <input type="float" autocomplete="off" name="sodium" required />
+                        </div>
+                        <h3>in mg</h3>
+                    </div>
+                    <div class="unit" style="display: flex;">
+                        <div class="input-groups form-item message-error" data-tooltip="Carbohydrates, or carbs, are sugar molecules. Along with proteins and fats, carbohydrates are one of three main nutrients found in foods and drinks. If you are in good shape and want to fuel a daily, light-intensity workout, eat about 3 to 5 grams of carbohydrates for every kilogram of body weight. For someone who weighs 150 pounds (68 kilograms) that's between 200 and 340 grams a day.">
+                            <p>Enter Total Carbohydrates</p>
+                            <input type="float" autocomplete="off" name="totalcarbohydrates" required />
+                        </div>
+                        <h3>in g</h3>
+                    </div>
+                    <div class="unit" style="display: flex;">
+                        <div class="input-groups form-item message-error" data-tooltip="Protein is an important part of a healthy diet. Proteins are made up of chemical 'building blocks' called amino acids.Every cell in the human body contains protein. The basic structure of protein is a chain of amino acids. For those looking to enhance the muscle growth that typically occurs with exercise, evidence supports consuming 20 to 30 grams of protein at a time">
+                            <p>Enter Protein</p>
+                            <input type="float" autocomplete="off" name="protein" required />
+                        </div>
+                        <h3>in g</h3>
+                    </div>
+                    <div class="unit" style="display: flex;">
+                        <div class="input-groups form-item message-error" data-tooltip="Calcium is one of those underappreciated workhorses of the body.Calcium is known best of all as a promoter of healthy and strong bones. It stabilizes blood pressure, promotes blood clotting, maintains brain function, promotes insulin sensitivity, and even helps your muscles contract. 
+                    This mineral is crucial for the health of bone tissue, as well as being needed for healthy muscle and nerve function, meaning it plays a crucial role in athletic performance
+                    Range in supplements (180 mg- 250 mg)">
+                            <p>Enter Calcium</p>
+                            <input type="float" autocomplete="off" name="calcium" required />
+                        </div>
+                        <h3>in mg</h3>
+                    </div>
+                    <div class="unit" style="display: flex;">
+                        <div class="input-groups form-item message-error" data-tooltip="Potassium plays a major role in maintaining the water content of cells. It is also essential for: nerve transmission. muscle contractions.Potassium is a vital nutrient, to be sure, but the amount of Potassium in your blood cannot vary very much—the normal range is (140-300 mg)">
+                            <p>Enter Potassium</p>
+                            <input type="float" autocomplete="off" name="potassium" required />
+                        </div>
+                        <h3>in mg</h3>
+                    </div>
+                    <div class="unit" style="display: flex;">
+                        <div class="input-groups form-item message-error" data-tooltip="Iron is a trace mineral that helps the body transport oxygen through the blood and muscles, create red blood cells, and release energy from cells. Iron helps to preserve many vital functions in the body, including general energy and focus, gastrointestinal processes, the immune system, and the regulation of body temperature.
+                    Range in supplements(0.5mg - 2mg)">
+                            <p>Enter iron</p>
+                            <input type="float" autocomplete="off" name="iron" required />
+                        </div>
+                        <h3>in mg</h3>
+                    </div>
+                    <a href="">
+                        <button name="login" value="predict" type="submit" class="predict">
+                Predict
+              </button></a>
+
+
+                </form>
+            </div>
+
+        </div>
+        
+    </section>
+</body>
+
+</html>
